@@ -2,7 +2,7 @@
 
 function build_graphite_url(options, raw) {
     raw = raw || false;
-    var url = options.graphite_url + "?";
+    var url = options.url + "?";
 
     // use random parameter to force image refresh
     options["_t"] = options["_t"] || Math.random();
@@ -440,7 +440,7 @@ function find_definition (target_graphite, options) {
         from: "-1hour",
         height: "300",
         until: "now",
-        graphite_url: "/render/",
+        url: "/render/",
         width: "940"
     };
 
